@@ -3,7 +3,7 @@ import { User } from "../models/user";
 import { UserService } from '../services/user.services';
 import RequestWithUser from '../types/user.request.type';
 
-export const getUser = async (req: RequestWithUser, res: Response) => {
+export const getMe = async (req: RequestWithUser, res: Response) => {
     if (!req.user) {
         res.status(401).json({ error: "Unauthorized" });
         return;
