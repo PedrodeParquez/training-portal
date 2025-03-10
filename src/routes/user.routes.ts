@@ -1,10 +1,10 @@
 import { Router } from "express";
 import { authMiddleware } from "../middlewares/auth.middlewares";
-import { deleteUser, getUser } from "../controllers/user.controller";
+import { deleteUser, getMe } from "../controllers/user.controller";
 
 const router = Router();
 
-router.get("/getUser", authMiddleware, getUser);
+router.get("/me", authMiddleware, getMe);
 
 router.delete("/:id", authMiddleware, deleteUser);
 
