@@ -1,6 +1,6 @@
 import { Response } from 'express';
-import { User } from "../models/user";
-import { UserService } from '../services/user.services';
+import { User } from "../models/user.model";
+import { UserService } from '../services/user.service';
 import RequestWithUser from '../types/user.request.type';
 
 export const getMe = async (req: RequestWithUser, res: Response) => {
