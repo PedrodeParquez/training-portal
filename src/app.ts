@@ -4,8 +4,11 @@ import { connectDB } from './config/database';
 import { ENV } from './config/env';
 import { notFoundMiddleware } from './middlewares/notFound.middleware';
 
-import userRoutes from './routes/user.routes';
 import authRoutes from './routes/auth.routes';
+import userRoutes from './routes/user.routes';
+import courseRoutes from './routes/course.routes';
+import tagRoutes from './routes/tag.routes';
+import storageRoutes from './routes/storage.routes';
 
 const app = createServer();
 
@@ -15,6 +18,9 @@ app.use(express.json());
 
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
+app.use('/api/courses', courseRoutes);
+app.use('/api/tags', tagRoutes);
+app.use('/api/storage', storageRoutes);
 
 app.use(notFoundMiddleware);
 
