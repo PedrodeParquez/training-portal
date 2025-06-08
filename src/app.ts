@@ -11,6 +11,7 @@ import tagRoutes from './routes/tag.routes';
 import storageRoutes from './routes/storage.routes';
 import lessonRoutes from './routes/lesson.routes';
 import commentRoutes from './routes/comment.routes';
+import enrollmentRoutes from './routes/enrollment.routes';
 
 const app = createServer();
 
@@ -25,6 +26,7 @@ app.use('/api/tags', tagRoutes);
 app.use('/api/storage', storageRoutes);
 app.use('/api/lessons', lessonRoutes);
 app.use('/api/comments', commentRoutes);
+app.use('/api/enrollments', enrollmentRoutes);
 
 app.use(notFoundMiddleware);
 
