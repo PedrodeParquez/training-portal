@@ -1,4 +1,5 @@
 import mongoose, { Schema, Document } from 'mongoose';
+
 export interface ICategory extends Document {
     _id: mongoose.Types.ObjectId;
     title: string;
@@ -14,4 +15,4 @@ const CategorySchema = new Schema<ICategory>({
     createdAt: { type: Date, default: Date.now },
 });
 
-export const Category = mongoose.model<ICategory>('Course', CategorySchema);
+export const Category = mongoose.model<ICategory>('Category', CategorySchema);
